@@ -9,7 +9,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-
+import MainNavigation from './components/navigation/main-navigation.jsx'
 import { getUser } from "~/session.server";
 import stylesheet from "~/tailwind.css";
 
@@ -32,6 +32,7 @@ export default function App() {
         <Links />
       </head>
       <body className="h-full">
+        <MainNavigation />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
