@@ -36,3 +36,22 @@ model Note {
   user   User   @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   userId String
 }
+
+model ProfessionalBoard {
+  id Int @id @default(autoincrement())
+  licenses License[]
+  entityName String
+  shortName String @unique
+}
+
+model License {
+  id    Int @id @default(autoincrement())
+  licenseType String
+  board ProfessionalBoard @relation(fields: [boardId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  boardId Int
+  professionalBoard String
+  professionPrefix String
+  professionName  String
+}
+
+// model Operator {}
