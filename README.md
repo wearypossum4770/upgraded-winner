@@ -1,3 +1,28 @@
+# Typescript Utility Types
+
+1. Pick<Type, Keys>
+2. Omit<Type, Keys>
+3. Partial<Type> (like Partial<User>)
+4. Required<Type>
+5. Readonly<Type>
+6. ReturnType<Type>
+7. Extract<T,U>
+8. Record<K,T>
+9. NonNullable<T>
+10. InstanceType<T> (type T0 = InstanceType<typeof C>)
+
+```js
+type T0 = Parameters<() => string>;
+// type T0 = []
+
+type T1 = Parameters<(s: string) => void>;
+// type T1 = [s: string]
+type T2 = Parameters<<T>(arg: T) => T>;
+// type T2 = [arg: unknown]
+```
+
+<!-- https://javascript.plainenglish.io/5-advanced-vue3-techniques-to-boost-your-application-productivity-50fbdbc416a -->
+
 # Remix Indie Stack
 
 ![The Remix Indie Stack](https://repository-images.githubusercontent.com/465928257/a241fa49-bd4d-485a-a2a5-5cb8e4ee0abf)
